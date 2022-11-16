@@ -32,7 +32,7 @@
                     <h2 class="app__body__input__heading__text">Type your Temperature:</h2>
                 </div>
                 <div class="app__body__input__temp">
-                    <input type="text" name="" id="" class="app__body__input__temp__box">
+                    <input type="number" id="temp__input" class="app__body__input__temp__box temp__input">
                 </div>
                 <div class="app__body__input__buttons">
                     <button class="app__body__input__buttons__btn btn__convert">Convert</button>
@@ -44,10 +44,10 @@
                     <h2 class="app__body__output__heading__text">Your temperature is:</h2>
                 </div>
                 <div class="app__body__output__temp">
-                    <p class="app__output__temp__p output">69*C</p>
+                    <p class="app__output__temp__p output"><span class="content"></span><span class="display" id="c">°C</span><span class="no-display" id="fahr">°F</span></p>
                 </div>
                 <div class="app__body__output__buttons">
-                    <button class="app__body__output__buttons__btn">Revert</button>
+                    <button class="app__body__output__buttons__btn btn__revert">Revert</button>
                 </div>
             </section>
         </div>

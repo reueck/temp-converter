@@ -23,7 +23,7 @@ body {
 	border-style: solid;
 	border-width: 0 25px 25px 25px;
 	border-color: transparent transparent rgb(232, 232, 232) transparent;
-    z-index: 1;
+	z-index: 1;
 }
 main {
 	border-radius: 20px;
@@ -131,6 +131,10 @@ header {
 				font-size: 4em;
 				text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 			}
+			.no-display {
+				display: none;
+			}
+			
 		}
 		&__buttons {
 			grid-row: 5/7;

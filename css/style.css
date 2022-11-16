@@ -166,6 +166,9 @@ header .app__heading__info {
   font-size: 4em;
   text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.app__body__output__temp .no-display {
+  display: none;
+}
 .app__body__output__buttons {
   grid-row: 5/7;
   grid-column: 2/3;
