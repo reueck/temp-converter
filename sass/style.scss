@@ -1,0 +1,145 @@
+@import './mixins';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-family: 'Source Sans Pro', sans-serif;
+	background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+		linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+	background-blend-mode: multiply;
+}
+.triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 25px 25px 25px;
+	border-color: transparent transparent rgb(232, 232, 232) transparent;
+    z-index: 1;
+}
+main {
+	border-radius: 20px;
+	background-color: #fff;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	padding: 1.5em 1em;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: stretch;
+	background-color: rgb(232, 232, 232);
+	.app__heading {
+		&__text {
+			font-size: 2.5em;
+			font-weight: 300;
+		}
+		&__info {
+			font-size: 2em;
+			padding: 0 0.5em;
+		}
+	}
+}
+
+.app__body {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	gap: 0;
+	&__input {
+		padding: 1.5em 1em;
+		display: grid;
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-columns: 1fr;
+		&__heading {
+			grid-row: 1/3;
+			grid-column: 1/4;
+			padding: 1em 0;
+			&__text {
+				font-weight: 400;
+				font-size: 2em;
+			}
+		}
+		&__temp {
+			grid-row: 3/5;
+			grid-column: 1/4;
+			&__box {
+				padding: 0.5rem 1rem;
+				margin: 1em 2em;
+				max-height: 2.5rem;
+				max-width: 6rem;
+				font-size: 1.5rem;
+				border-radius: 5px;
+				border: none;
+				box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			}
+		}
+		&__buttons {
+			grid-row: 6;
+			grid-column: 1/4;
+			&__btn {
+				margin: 0.5em 2em;
+			}
+			.btn__convert {
+				@include btn__apple__bigSur__blue;
+				box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			}
+			.btn__reset {
+				@include btn__apple__bigSur__dark;
+				box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			}
+		}
+	}
+	&__output {
+		display: grid;
+		padding: 1.5em 1em;
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-columns: 1fr;
+		@include dark__gradient;
+		&__heading {
+			grid-row: 1/3;
+			grid-column: 1/4;
+			&__text {
+				font-weight: 400;
+				color: #fff;
+				font-size: 2em;
+			}
+		}
+		&__temp {
+			grid-row: 2/6;
+			grid-column: 2/3;
+			p {
+				margin: 1em 2em;
+				color: #fff;
+				font-weight: 700;
+				font-size: 4em;
+				text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			}
+		}
+		&__buttons {
+			grid-row: 5/7;
+			grid-column: 2/3;
+			&__btn {
+				margin: 0.5em 2em;
+				@include btn__apple__bigSur__white;
+				box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			}
+		}
+	}
+}

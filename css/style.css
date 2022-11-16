@@ -1,1 +1,191 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Source Sans Pro", sans-serif;
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 25px 25px;
+  border-color: transparent transparent rgb(232, 232, 232) transparent;
+  z-index: 1;
+}
+
+main {
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  padding: 1.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: rgb(232, 232, 232);
+}
+header .app__heading__text {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+header .app__heading__info {
+  font-size: 2em;
+  padding: 0 0.5em;
+}
+
+.app__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 0;
+}
+.app__body__input {
+  padding: 1.5em 1em;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr;
+}
+.app__body__input__heading {
+  grid-row: 1/3;
+  grid-column: 1/4;
+  padding: 1em 0;
+}
+.app__body__input__heading__text {
+  font-weight: 400;
+  font-size: 2em;
+}
+.app__body__input__temp {
+  grid-row: 3/5;
+  grid-column: 1/4;
+}
+.app__body__input__temp__box {
+  padding: 0.5rem 1rem;
+  margin: 1em 2em;
+  max-height: 2.5rem;
+  max-width: 6rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.app__body__input__buttons {
+  grid-row: 6;
+  grid-column: 1/4;
+}
+.app__body__input__buttons__btn {
+  margin: 0.5em 2em;
+}
+.app__body__input__buttons .btn__convert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(180deg, #4b91f7 0%, #367af6 100%);
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.app__body__input__buttons .btn__convertfocus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+.app__body__input__buttons .btn__reset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #6e6d70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #dfdedf;
+  touch-action: manipulation;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.app__body__input__buttons .btn__reset:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+.app__body__output {
+  display: grid;
+  padding: 1.5em 1em;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr;
+  background-color: #e4e4e1;
+  background-image: radial-gradient(at top center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.6) 100%);
+  background-blend-mode: normal, multiply;
+}
+.app__body__output__heading {
+  grid-row: 1/3;
+  grid-column: 1/4;
+}
+.app__body__output__heading__text {
+  font-weight: 400;
+  color: #fff;
+  font-size: 2em;
+}
+.app__body__output__temp {
+  grid-row: 2/6;
+  grid-column: 2/3;
+}
+.app__body__output__temp p {
+  margin: 1em 2em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 4em;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.app__body__output__buttons {
+  grid-row: 5/7;
+  grid-column: 2/3;
+}
+.app__body__output__buttons__btn {
+  margin: 0.5em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #3d3d3d;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.app__body__output__buttons__btn:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}/*# sourceMappingURL=style.css.map */
