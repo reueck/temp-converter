@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,41 @@
     <script defer src="./js/script.js"></script>
     <title>Konwerter temperatur</title>
 </head>
+
 <body>
-    
+    <main>
+        <header>
+            <div class="app__heading">
+                <p class="app__heading__text">Temperature converter</p>
+            </div>
+            <div class="app__heading__info"><i class="app__heading__info__icon"></i></div>
+        </header>
+        <div class="app__body">
+            <section class="app__imput">
+                <div class="app__input__heading">
+                    <h2 class="app__input__heading_text">Type your Temperature</h2>
+                </div>
+                <div class="app__input__temp">
+                    <input type="text" name="" id="" class="app__input__temp__input__temp">
+                </div>
+                <div class="app__input__buttons">
+                    <button class="app__input__buttons__btn__convert">Convert</button>
+                    <button class="app__input__buttons__btn__reset">Reset</button>
+                </div>
+            </section>
+            <section class="app__output">
+                <div class="app__output__heading">
+                    <h2 class="app__output__heading__text">Your temperature is:</h2>
+                </div>
+                <div class="app__output__temperature">
+                    <p class="app__output__temperature__p output"></p>
+                </div>
+                <div class="app__output__buttons">
+                    <button class="app__output__buttons__btn">Zamień</button>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
+
 </html>
